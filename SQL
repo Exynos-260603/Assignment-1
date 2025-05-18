@@ -1,0 +1,15 @@
+create database bookmyshow;
+
+use bookmyshow;
+create table user_details(
+user_id serial primary key,
+user_name varchar(50) unique not null,
+email varchar(20) unique not null,
+pass_word varchar (10) not null);
+
+insert into user_details(
+user_name,email,pass_word) values('Chanakya','chanakya@gmail.com','1234');
+
+ alter table user_details MODIFY COLUMN user_id INT AUTO_INCREMENT;
+ 
+ select * from user_details;
